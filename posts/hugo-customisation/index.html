@@ -1,0 +1,129 @@
+<!doctype html><html lang=en-gb>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<title>Hugo Customisation | andrewfitzy.github.io</title>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=description content="Once Hugo and the build pipeline are set up, next steps will be customising Hugo.">
+<meta name=generator content="Hugo 0.88.1">
+<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<link rel=stylesheet href=/ananke/css/main.min.css>
+<meta property="og:title" content="Hugo Customisation">
+<meta property="og:description" content="Once Hugo and the build pipeline are set up, next steps will be customising Hugo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewfitzy.github.io/posts/hugo-customisation/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-10-22T19:41:23+01:00">
+<meta property="article:modified_time" content="2021-10-22T19:41:23+01:00">
+<meta itemprop=name content="Hugo Customisation">
+<meta itemprop=description content="Once Hugo and the build pipeline are set up, next steps will be customising Hugo."><meta itemprop=datePublished content="2021-10-22T19:41:23+01:00">
+<meta itemprop=dateModified content="2021-10-22T19:41:23+01:00">
+<meta itemprop=wordCount content="581">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Hugo Customisation">
+<meta name=twitter:description content="Once Hugo and the build pipeline are set up, next steps will be customising Hugo.">
+</head>
+<body class="ma0 avenir bg-near-white">
+<header>
+<div class=bg-black>
+<nav class="pv3 ph3 ph4-ns" role=navigation>
+<div class="flex-l justify-between items-center center">
+<a href=/ class="f3 fw2 hover-white no-underline white-90 dib">
+andrewfitzy.github.io
+</a>
+<div class="flex-l items-center">
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main class=pb7 role=main>
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+<header class="mt4 w-100">
+<aside class="instapaper_ignoref b helvetica tracked">
+POSTS
+</aside>
+<div id=sharing class=mt3>
+<a href="https://www.facebook.com/sharer.php?u=https://andrewfitzy.github.io/posts/hugo-customisation/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg>
+</a>
+<a href="https://twitter.com/share?url=https://andrewfitzy.github.io/posts/hugo-customisation/&text=Hugo%20Customisation" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg>
+</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://andrewfitzy.github.io/posts/hugo-customisation/&title=Hugo%20Customisation" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg>
+</a>
+</div>
+<h1 class="f1 athelas mt3 mb1">Hugo Customisation</h1>
+<time class="f6 mv4 dib tracked" datetime=2021-10-22T19:41:23+01:00>October 22, 2021</time>
+<span class="f6 mv4 dib tracked"> - 3 minutes read </span>
+<span class="f6 mv4 dib tracked"> - 581 words </span>
+</header>
+<div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Once Hugo and the build pipeline are set up, next steps will be customising Hugo.</p>
+<p>If you followed my <a href=https://andrewfitzy.github.io/posts/hugo-setup/>Hugo Setup</a> post you&rsquo;ll now have a site that you can commit to for automatic build and deployment. So what&rsquo;s the next step after this&mldr; well customisation of course.</p>
+<p>I&rsquo;ll start with the customisation options covered in the <a href=https://gohugo.io/getting-started/quick-start/#step-6-customize-the-theme>quickstart</a>. You should have a config.toml file that looks like this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#34;http://example.org/&#34;</span>
+<span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#34;en-us&#34;</span>
+<span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#34;My New Hugo Site&#34;</span>
+<span style=color:#a6e22e>theme</span> = <span style=color:#e6db74>&#34;ananke&#34;</span>
+</code></pre></div><p>The first 3 lines are default config and the fourth line was added to select the <a href=https://themes.gohugo.io/themes/gohugo-theme-ananke/>ananke</a> theme, we&rsquo;ll take a look at the first three lines in detail.</p>
+<h3 id=baseurl>baseURL</h3>
+<p>Default value:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#34;http://example.org/&#34;</span>
+</code></pre></div><p><a href=https://gohugo.io/getting-started/configuration/#baseurl>baseURL</a> defines the root from which all links to the Hugo site will be built. By default, a post will include sharing links for 3 popular social media sites, this <code>baseURL</code> property is used for building those links, for instance&mldr;</p>
+<p>Facebook link:
+<img src=/2021-10-19/01_FacebookLink.png alt="Facebook link"></p>
+<p>Twitter link:
+<img src=/2021-10-19/02_TwitterLink.png alt="Twitter link"></p>
+<p>LinkedIn link:
+<img src=/2021-10-19/03_LinkedInLink.png alt="LinkedIn link"></p>
+<p>In each case the <code>baseURL</code> is used to create the link back for the post to the social media platform, and as this is set to <code>http://example.org/</code> by default it will mean that any sharing of links to content will actually be links to an IANA holding page rather than links to content.</p>
+<p>This value should be updated with the value of the GitHub pages site, so in my case this property will be changed to:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>baseURL</span> = <span style=color:#e6db74>&#34;http://andrewfitzy.github.io/&#34;</span>
+</code></pre></div><p>After making this change, I can see that links back to my content will now be correct.</p>
+<h3 id=languagecode>languageCode</h3>
+<p>Default value:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#34;en-us&#34;</span>
+</code></pre></div><p>I couldn&rsquo;t find any docs for this property, the format though is that of a locale i.e. <code>&lt;language>-&lt;region></code>. As I&rsquo;m basked in the UK, I will update my code to be:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>languageCode</span> = <span style=color:#e6db74>&#34;en-gb&#34;</span>
+</code></pre></div><h3 id=title>title</h3>
+<p>Default value:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#34;My New Hugo Site&#34;</span>
+</code></pre></div><p>This displays in the header and footer for the site and also on the front page:
+<img src=/2021-10-19/04_DefaultHugoPage.png alt="Default Hugo page"></p>
+<p>My site doesn&rsquo;t really have a name so I&rsquo;ve updated this value to be the GitHub pages url:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>title</span> = <span style=color:#e6db74>&#34;andrewfitzy.github.io&#34;</span>
+</code></pre></div><h2 id=other-configuration>Other configuration</h2>
+<p>This section covers a couple of other properties I&rsquo;ve decided to set for my Hugo site.</p>
+<h3 id=enableemoji>enableEmoji</h3>
+<p>Default value:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>enableEmoji</span> = <span style=color:#66d9ef>false</span>
+</code></pre></div><p>Setting <a href=https://gohugo.io/getting-started/configuration/#enableemoji>enableEmoji</a> to <code>true</code> means that emoji shortcuts like you&rsquo;d use in slack or GitHub can be included in the markdown files. 😄</p>
+<h3 id=params>Params</h3>
+<p>Not specifically a single property but a list of parameters that can be used <a href=https://gohugo.io/variables/site/#the-siteparams-variable>site wide</a>. The three parameters I have set are specific to the ananke theme, these are covered in the <a href=https://themes.gohugo.io/themes/gohugo-theme-ananke>ananke documentation</a>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>params</span>]
+  <span style=color:#a6e22e>background_color_class</span> = <span style=color:#e6db74>&#34;bg-black&#34;</span>
+  <span style=color:#a6e22e>featured_image</span> = <span style=color:#e6db74>&#34;/images/gohugo-default-sample-hero-image.jpg&#34;</span>
+  <span style=color:#a6e22e>show_reading_time</span> = <span style=color:#66d9ef>true</span>
+</code></pre></div><h4 id=background_color_class>background_color_class</h4>
+<p>In the anake theme, this is the colour of the background for the header, footer and main banner on the frnot page if no <code>featured_image</code> is set. By default the value is black but I&rsquo;ve defined it so that I can test other colour schemes when I want to.</p>
+<h4 id=featured_image>featured_image</h4>
+<p>A link to an image that can be used on the front page of the Hugo site, I&rsquo;ve set the value used to be the sample image included with the ananke theme&mldr; this may change in future.</p>
+<h4 id=show_reading_time>show_reading_time</h4>
+<p>Does what it says on the tin, adding this will include an approximate reading time at the top of the site, see above for an example of how it looks.</p>
+<p>This section has worked through the updates I&rsquo;ve made to the configuration of <a href=http://andrewfitzy.github.io>http://andrewfitzy.github.io</a> to get the site looking how it currently looks.</p><ul class=pa0>
+</ul>
+<div class="mt6 instapaper_ignoref">
+</div>
+</div>
+<aside class="w-30-l mt6-l">
+</aside>
+</article>
+</main>
+<footer class="bg-black bottom-0 w-100 pa3" role=contentinfo>
+<div class="flex justify-between">
+<a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://andrewfitzy.github.io/>
+&copy; andrewfitzy.github.io 2021
+</a>
+<div>
+</div>
+</div>
+</footer>
+</body>
+</html>
