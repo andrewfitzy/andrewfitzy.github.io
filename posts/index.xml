@@ -1,1 +1,132 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on andrewfitzy.github.io</title><link>https://andrewfitzy.github.io/posts/</link><description>Recent content in Posts on andrewfitzy.github.io</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 22 Oct 2021 19:41:23 +0100</lastBuildDate><atom:link href="https://andrewfitzy.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Customisation</title><link>https://andrewfitzy.github.io/posts/hugo-customisation/</link><pubDate>Fri, 22 Oct 2021 19:41:23 +0100</pubDate><guid>https://andrewfitzy.github.io/posts/hugo-customisation/</guid><description>&lt;p>Once Hugo and the build pipeline are set up, next steps will be customising Hugo.&lt;/p></description></item><item><title>Hugo Setup</title><link>https://andrewfitzy.github.io/posts/hugo-setup/</link><pubDate>Wed, 13 Oct 2021 11:20:15 +0100</pubDate><guid>https://andrewfitzy.github.io/posts/hugo-setup/</guid><description>&lt;p>Welcome to &lt;a href="https://andrewfitzy.github.io">andrewfitzy.github.io&lt;/a>, this first post will give a step by step guide of how I got this site up and running.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on andrewfitzy.github.io</title><link>https://andrewfitzy.github.io/posts/</link><description>Recent content in Posts on andrewfitzy.github.io</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Fri, 22 Oct 2021 19:41:23 +0100</lastBuildDate><atom:link href="https://andrewfitzy.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Customisation</title><link>https://andrewfitzy.github.io/posts/hugo-customisation/</link><pubDate>Fri, 22 Oct 2021 19:41:23 +0100</pubDate><guid>https://andrewfitzy.github.io/posts/hugo-customisation/</guid><description>&lt;p>Once Hugo and the build pipeline are set up, next steps will be customising Hugo.&lt;/p></description><content>&lt;p>Once Hugo and the build pipeline are set up, next steps will be customising Hugo.&lt;/p>
+&lt;p>If you followed my &lt;a href="https://andrewfitzy.github.io/posts/hugo-setup/">Hugo Setup&lt;/a> post you&amp;rsquo;ll now have a site that you can commit to for automatic build and deployment. So what&amp;rsquo;s the next step after this&amp;hellip; well customisation of course.&lt;/p>
+&lt;p>I&amp;rsquo;ll start with the customisation options covered in the &lt;a href="https://gohugo.io/getting-started/quick-start/#step-6-customize-the-theme">quickstart&lt;/a>. You should have a config.toml file that looks like this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">baseURL&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;http://example.org/&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">languageCode&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;en-us&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">title&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;My New Hugo Site&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">theme&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;ananke&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The first 3 lines are default config and the fourth line was added to select the &lt;a href="https://themes.gohugo.io/themes/gohugo-theme-ananke/">ananke&lt;/a> theme, we&amp;rsquo;ll take a look at the first three lines in detail.&lt;/p>
+&lt;h3 id="baseurl">baseURL&lt;/h3>
+&lt;p>Default value:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">baseURL&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;http://example.org/&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a href="https://gohugo.io/getting-started/configuration/#baseurl">baseURL&lt;/a> defines the root from which all links to the Hugo site will be built. By default, a post will include sharing links for 3 popular social media sites, this &lt;code>baseURL&lt;/code> property is used for building those links, for instance&amp;hellip;&lt;/p>
+&lt;p>Facebook link:
+&lt;img src="https://andrewfitzy.github.io/2021-10-19/01_FacebookLink.png" alt="Facebook link">&lt;/p>
+&lt;p>Twitter link:
+&lt;img src="https://andrewfitzy.github.io/2021-10-19/02_TwitterLink.png" alt="Twitter link">&lt;/p>
+&lt;p>LinkedIn link:
+&lt;img src="https://andrewfitzy.github.io/2021-10-19/03_LinkedInLink.png" alt="LinkedIn link">&lt;/p>
+&lt;p>In each case the &lt;code>baseURL&lt;/code> is used to create the link back for the post to the social media platform, and as this is set to &lt;code>http://example.org/&lt;/code> by default it will mean that any sharing of links to content will actually be links to an IANA holding page rather than links to content.&lt;/p>
+&lt;p>This value should be updated with the value of the GitHub pages site, so in my case this property will be changed to:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">baseURL&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;http://andrewfitzy.github.io/&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After making this change, I can see that links back to my content will now be correct.&lt;/p>
+&lt;h3 id="languagecode">languageCode&lt;/h3>
+&lt;p>Default value:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">languageCode&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;en-us&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>I couldn&amp;rsquo;t find any docs for this property, the format though is that of a locale i.e. &lt;code>&amp;lt;language&amp;gt;-&amp;lt;region&amp;gt;&lt;/code>. As I&amp;rsquo;m basked in the UK, I will update my code to be:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">languageCode&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;en-gb&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="title">title&lt;/h3>
+&lt;p>Default value:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">title&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;My New Hugo Site&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This displays in the header and footer for the site and also on the front page:
+&lt;img src="https://andrewfitzy.github.io/2021-10-19/04_DefaultHugoPage.png" alt="Default Hugo page">&lt;/p>
+&lt;p>My site doesn&amp;rsquo;t really have a name so I&amp;rsquo;ve updated this value to be the GitHub pages url:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">title&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;andrewfitzy.github.io&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="other-configuration">Other configuration&lt;/h2>
+&lt;p>This section covers a couple of other properties I&amp;rsquo;ve decided to set for my Hugo site.&lt;/p>
+&lt;h3 id="enableemoji">enableEmoji&lt;/h3>
+&lt;p>Default value:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">enableEmoji&lt;/span> = &lt;span style="color:#66d9ef">false&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Setting &lt;a href="https://gohugo.io/getting-started/configuration/#enableemoji">enableEmoji&lt;/a> to &lt;code>true&lt;/code> means that emoji shortcuts like you&amp;rsquo;d use in slack or GitHub can be included in the markdown files. 😄&lt;/p>
+&lt;h3 id="params">Params&lt;/h3>
+&lt;p>Not specifically a single property but a list of parameters that can be used &lt;a href="https://gohugo.io/variables/site/#the-siteparams-variable">site wide&lt;/a>. The three parameters I have set are specific to the ananke theme, these are covered in the &lt;a href="https://themes.gohugo.io/themes/gohugo-theme-ananke">ananke documentation&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">[&lt;span style="color:#a6e22e">params&lt;/span>]
+&lt;span style="color:#a6e22e">background_color_class&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;bg-black&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">featured_image&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;/images/gohugo-default-sample-hero-image.jpg&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">show_reading_time&lt;/span> = &lt;span style="color:#66d9ef">true&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="background_color_class">background_color_class&lt;/h4>
+&lt;p>In the anake theme, this is the colour of the background for the header, footer and main banner on the frnot page if no &lt;code>featured_image&lt;/code> is set. By default the value is black but I&amp;rsquo;ve defined it so that I can test other colour schemes when I want to.&lt;/p>
+&lt;h4 id="featured_image">featured_image&lt;/h4>
+&lt;p>A link to an image that can be used on the front page of the Hugo site, I&amp;rsquo;ve set the value used to be the sample image included with the ananke theme&amp;hellip; this may change in future.&lt;/p>
+&lt;h4 id="show_reading_time">show_reading_time&lt;/h4>
+&lt;p>Does what it says on the tin, adding this will include an approximate reading time at the top of the site, see above for an example of how it looks.&lt;/p>
+&lt;p>This section has worked through the updates I&amp;rsquo;ve made to the configuration of &lt;a href="http://andrewfitzy.github.io">http://andrewfitzy.github.io&lt;/a> to get the site looking how it currently looks.&lt;/p></content></item><item><title>Hugo Setup</title><link>https://andrewfitzy.github.io/posts/hugo-setup/</link><pubDate>Wed, 13 Oct 2021 11:20:15 +0100</pubDate><guid>https://andrewfitzy.github.io/posts/hugo-setup/</guid><description>&lt;p>Welcome to &lt;a href="https://andrewfitzy.github.io">andrewfitzy.github.io&lt;/a>, this first post will give a step by step guide of how I got this site up and running.&lt;/p></description><content>&lt;p>Welcome to &lt;a href="https://andrewfitzy.github.io">andrewfitzy.github.io&lt;/a>, this first post will give a step by step guide of how I got this site up and running.&lt;/p>
+&lt;p>Many of the steps have been copied from other sites, however I didn&amp;rsquo;t find an easy to follow guide to getting my setup in place, shout out to the following places though for inspiration:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ruddra.com/hugo-deploy-static-page-using-github-actions/">https://ruddra.com/hugo-deploy-static-page-using-github-actions/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/peaceiris/actions-gh-pages">https://github.com/peaceiris/actions-gh-pages&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="create-a-git-repos-for-the-site-source-and-clone">Create a git repos for the site source and clone&lt;/h2>
+&lt;h3 id="account_namegithubio">&amp;lt;account_name&amp;gt;.github.io&lt;/h3>
+&lt;p>Each GitHub account can have a public &amp;lt;account_name&amp;gt;.github.io repository associated with it, these are referred to a &lt;a href="https://pages.github.com/">GitHub pages&lt;/a>. GitHub pages are hosted sites where you can host almost anything as long as it doesn&amp;rsquo;t break the GitHub pages rules. This repo will be our target repo where the Hugo source is built to.&lt;/p>
+&lt;h3 id="hugo-site-source">Hugo site source&lt;/h3>
+&lt;p>Using GitHub &lt;a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">create a new repo&lt;/a> to store the source code for the Hugo site. This can be a private repo, we will be building and publishing from this repo to the &amp;lt;account_name&amp;gt;.github.io repo.&lt;/p>
+&lt;p>Once the repo is created, clone it.&lt;/p>
+&lt;h2 id="create-a-hugo-site">Create a Hugo site&lt;/h2>
+&lt;p>Using a terminal, navigate to the parent directory of the git repo we&amp;rsquo;ve just cloned. Initialise the Hugo site in the cloned private repo. My repo is called &lt;code>site-source&lt;/code> so replace this with whatever the name of your private repo is.&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo new site --force site-source
+&lt;/code>&lt;/pre>&lt;p>Add a theme to the Hugo site, there are plenty to choose from at &lt;a href="https://themes.gohugo.io/">themes.gohub.io&lt;/a> but I used the &lt;a href="https://themes.gohugo.io/themes/gohugo-theme-ananke/">Ananke theme&lt;/a> as this is the one used in the &lt;a href="https://gohugo.io/getting-started/quick-start/">Quckstart guide&lt;/a>&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd site-source
+git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+&lt;/code>&lt;/pre>&lt;p>Finally use the theme by updating the site configuration:&lt;/p>
+&lt;pre tabindex="0">&lt;code>echo theme = \&amp;quot;ananke\&amp;quot; &amp;gt;&amp;gt; config.toml
+&lt;/code>&lt;/pre>&lt;p>Now you should be able to start the Hugo server and see an empty site if you navigate to &lt;a href="http://localhost:1313/">http://localhost:1313/&lt;/a>. To start the server:&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo server
+&lt;/code>&lt;/pre>&lt;h2 id="create-secrets-and-add-to-github">Create secrets and add to GitHub&lt;/h2>
+&lt;p>When we create our GitHub actions file, we will use &lt;a href="https://github.com/peaceiris/actions-gh-pages">actions-gh-pages&lt;/a> to publish from one repo to another and we will set this up to happen via deployment keys. So, first step is to &lt;a href="https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-create-ssh-deploy-key">set up public/private keys for deployment&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>ssh-keygen -t rsa -b 4096 -C &amp;quot;$(git config user.email)&amp;quot; -f gh-pages -N &amp;quot;&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>This will result in the creatio of 2 files in the &lt;code>~/.ssh&lt;/code> directory.&lt;/p>
+&lt;p>In the GitHub console:&lt;/p>
+&lt;ol>
+&lt;li>Click setting for the GitHub pages site (this is our &amp;lt;account_name&amp;gt;.github.io repo)&lt;/li>
+&lt;li>Click &lt;code>Deploy keys&lt;/code>&lt;/li>
+&lt;li>Create a new deploy key called &lt;code>ACTIONS_DEPLOY_KEY.pub&lt;/code> and copy in the contents of the &lt;code>~/.ssh/gh-pages.pub&lt;/code> file.&lt;/li>
+&lt;li>Click setting for the source site (in my case it&amp;rsquo;s the &lt;code>site-source&lt;/code> private repo)&lt;/li>
+&lt;li>Click &lt;code>Secrets&lt;/code>&lt;/li>
+&lt;li>Create a new secret key called &lt;code>ACTIONS_DEPLOY_KEY&lt;/code> and copy in the contents of the &lt;code>~/.ssh/gh-pages&lt;/code> file.&lt;/li>
+&lt;/ol>
+&lt;p>GitHub is now set up such that an action running in the site-source repo can publish to the GitHub pages repo.&lt;/p>
+&lt;h2 id="create-the-github-actions-file">Create the GitHub actions file&lt;/h2>
+&lt;p>This is the final step to setting up our build pipeline. In the source repo (&lt;code>site-source&lt;/code> in my case) create a folder called &lt;code>.github&lt;/code>, within this create a folder called &lt;code>workflows&lt;/code> and within this folder create a file called &lt;code>gh-pages.yml&lt;/code>. Finally populate this file with this content:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-YAML" data-lang="YAML">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">site-source&lt;/span>
+&lt;span style="color:#f92672">on&lt;/span>:
+&lt;span style="color:#f92672">push&lt;/span>:
+&lt;span style="color:#f92672">branches&lt;/span>:
+- &lt;span style="color:#ae81ff">main &lt;/span> &lt;span style="color:#75715e"># Set a branch to deploy&lt;/span>
+&lt;span style="color:#f92672">pull_request&lt;/span>:
+&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;span style="color:#f92672">deploy&lt;/span>:
+&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-20.04&lt;/span>
+&lt;span style="color:#f92672">steps&lt;/span>:
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">submodules&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span> &lt;span style="color:#75715e"># Fetch Hugo themes (true OR recursive)&lt;/span>
+&lt;span style="color:#f92672">fetch-depth&lt;/span>: &lt;span style="color:#ae81ff">0&lt;/span> &lt;span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Setup Hugo&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-hugo@v2&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">hugo-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;latest&amp;#39;&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
+&lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">hugo --minify&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Deploy&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-gh-pages@v3&lt;/span>
+&lt;span style="color:#f92672">if&lt;/span>: &lt;span style="color:#ae81ff">github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">deploy_key&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span>
+&lt;span style="color:#f92672">publish_dir&lt;/span>: &lt;span style="color:#ae81ff">./public&lt;/span>
+&lt;span style="color:#f92672">external_repository&lt;/span>: &lt;span style="color:#ae81ff">andrewfitzy/andrewfitzy.github.io&lt;/span>
+&lt;span style="color:#f92672">publish_branch&lt;/span>: &lt;span style="color:#ae81ff">master&lt;/span> &lt;span style="color:#75715e"># The branch of the external_repository to publish to&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Much of the above configuration is discussed on the &lt;a href="https://github.com/peaceiris/actions-gh-pages">actions-gh-pages&lt;/a> and the &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub&lt;/a> pages of the Hugo site. I found that I had to provide &lt;code>external_repository&lt;/code> and &lt;code>publish_branch&lt;/code> to get my pipeline building and deploying automatically so that pushing an update to my source repo results in a post appearing on &lt;a href="http://andrewfitzy.github.io">http://andrewfitzy.github.io&lt;/a>.&lt;/p>
+&lt;p>Assuming this guide has been followed and all has worked out ok, navigating to your GitHub pages site should result in a site that looks like&amp;hellip;
+&lt;img src="https://andrewfitzy.github.io/2021-10-13/01_DefaultHugoPage.png" alt="Default Hugo page">.&lt;/p>
+&lt;h2 id="create-a-new-post-like-this-one-and-watch-the-magic">Create a new post (like this one) and watch the magic&lt;/h2>
+&lt;p>Now that we have our site set up, each time we want to &lt;a href="https://gohugo.io/getting-started/quick-start/#step-4-add-some-content">add some content&lt;/a> we can use the following command:&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo new posts/&amp;lt;title-of-post&amp;gt;.md
+&lt;/code>&lt;/pre>&lt;p>Where &lt;code>&amp;lt;title-of-post&amp;gt;&lt;/code> is the, err, title of the post. In this case I called this post &lt;code>hugo-setup&lt;/code>. This command will result in a markdown file which can be edited with the content of the post. By default, the post will be created as a draft post, this means that it can be checked in but will not be published automatically.&lt;/p>
+&lt;p>To see what the draft post would look like, a local Hugo server can be started with the option to view draft posts turned on:&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo server -D
+&lt;/code>&lt;/pre>&lt;p>Any changes to the draft post that are saved will be recompiled and can be viewed immediately in the browser. Once you&amp;rsquo;re happy, change draft to false in the header, commit and push to GitHub and that&amp;rsquo;s it, the site will be rebuilt and published.&lt;/p>
+&lt;p>Thankyou for making it this far, I hope that the information has been useful.&lt;/p></content></item></channel></rss>
