@@ -1,0 +1,182 @@
+<!doctype html><html lang=en>
+<head>
+<title>Theme Update :: andrewfitzy.github.io</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="There are tons of themes available for Hugo, take a look at jamstack and the Hugo&amp;rsquo;s own page and there are plenty to play with. The different themes are sutilable for different sites, for instance geekblog is a good blog site theme, Resume A4 could be a good personal portfolio site and showcase could be good for recipes. I think that choosing a theme is about knowing what your site is going to be used for and also seeing what features a theme has available.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<link rel=canonical href=https://andrewfitzy.github.io/posts/theme-update/>
+<link rel=stylesheet href=https://andrewfitzy.github.io/assets/style.css>
+<link rel=apple-touch-icon href=https://andrewfitzy.github.io/img/apple-touch-icon-192x192.png>
+<link rel="shortcut icon" href=https://andrewfitzy.github.io/img/favicon/orange.png>
+<meta name=twitter:card content="summary">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Theme Update">
+<meta property="og:description" content="There are tons of themes available for Hugo, take a look at jamstack and the Hugo&amp;rsquo;s own page and there are plenty to play with. The different themes are sutilable for different sites, for instance geekblog is a good blog site theme, Resume A4 could be a good personal portfolio site and showcase could be good for recipes. I think that choosing a theme is about knowing what your site is going to be used for and also seeing what features a theme has available.">
+<meta property="og:url" content="https://andrewfitzy.github.io/posts/theme-update/">
+<meta property="og:site_name" content="andrewfitzy.github.io">
+<meta property="og:image" content="https://andrewfitzy.github.io/img/favicon/orange.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+<meta property="article:section" content="How to">
+<meta property="article:published_time" content="2022-02-12 15:00:57 +0100 +0100">
+</head>
+<body class=orange>
+<div class="container headings--one-size">
+<header class=header>
+<div class=header__inner>
+<div class=header__logo>
+<a href=https://andrewfitzy.github.io/>
+<div class=logo>
+Terminal
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class=content>
+<div class=post>
+<h1 class=post-title>
+<a href=https://andrewfitzy.github.io/posts/theme-update/>Theme Update</a></h1>
+<div class=post-meta>
+<span class=post-date>
+2022-02-12
+</span>
+</div>
+<span class=post-tags>
+#<a href=https://andrewfitzy.github.io/tags/hugo/>Hugo</a>&nbsp;
+</span>
+<div class=post-content><div>
+<p>There are tons of themes available for Hugo, take a look at <a href=https://jamstackthemes.dev/ssg/hugo/>jamstack</a> and the <a href=https://themes.gohugo.io/>Hugo&rsquo;s own page</a> and there are plenty to play with. The different themes are sutilable for different sites, for instance <a href=https://themes.gohugo.io/themes/hugo-geekblog/>geekblog</a> is a good blog site theme, <a href=https://themes.gohugo.io/themes/resume-a4/>Resume A4</a> could be a good personal portfolio site and <a href=https://themes.gohugo.io/themes/showcase-hugo-theme/>showcase</a> could be good for recipes. I think that choosing a theme is about knowing what your site is going to be used for and also seeing what features a theme has available.</p>
+<h2 id=downloading-a-new-theme>Downloading a new theme<a href=#downloading-a-new-theme class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<p>It&rsquo;s easy to try some new themes to see how the GitHub pages may change. I wanted to try a few different themes so I decided to try the different ways of adding the themes too. Below are the details of how I added each theme and a exploration of the pros and cons.</p>
+<h3 id=adding-the-theme-directly-via-a-download>Adding the theme directly via a download<a href=#adding-the-theme-directly-via-a-download class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>This is the easiest way to add a theme:</p>
+<ol>
+<li>Find the repo for the theme, for example the <a href=https://github.com/luizdepra/hugo-coder>hugo-coder</a> theme</li>
+<li>Download the source and unzip it in the <code>themes</code> folder.
+<img src=/theme-update/01.png alt="Direct code download"></li>
+</ol>
+<p>This is a very simple way to add and test themes and is easy to reverse as reverting is a case of removing the theme folder.</p>
+<p>One downside of this approach if used long term, is that applying any updates for the theme is a manual task, firstly finding the source for the theme then overwriting whatever already exists. Also, the theme files have to be stored in Git else configuration to use the theme will break the site.</p>
+<h3 id=adding-the-theme-directly-via-a-clone>Adding the theme directly via a clone<a href=#adding-the-theme-directly-via-a-clone class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>This is also a fairly easy way to add a theme:</p>
+<ol>
+<li>Find the repo for the theme, for example the <a href=https://github.com/Yukuro/hugo-theme-shell.git>hugo-theme-shell</a> theme</li>
+<li>Copy the URL of the repo for cloning
+<img src=/theme-update/02.png alt="Repo url for shell theme"></li>
+<li>Clone the repo in the themes folder of the hugo site:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone https://github.com/Yukuro/hugo-theme-shell.git
+</code></pre></div></li>
+</ol>
+<p>This is a simple way to add and test themes and is easy to reverse as reverting is a case of removing the theme folder. This method also allows for easy updating of the theme as getting the latest source is as simple as navigating to the theme folder and doing:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git pull
+</code></pre></div><p>One downside of this approach is the need to commit the theme files to Git else the configuration to use the theme will break the site.</p>
+<h3 id=adding-the-theme-by-creating-a-git-module>Adding the theme by creating a git module<a href=#adding-the-theme-by-creating-a-git-module class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>This is the method I see mentioned most often on the Hugo site and the theme sites themselves.</p>
+<ol>
+<li>Find the repo for the theme, for example the <a href=https://github.com/panr/hugo-theme-terminal.git>terminal</a> theme</li>
+<li>Copy the URL of the repo for adding as a submodule
+<img src=/theme-update/03.png alt="Repo url for terminal theme"></li>
+<li>Add the new theme as a new submodule, use this command from the main directory housing the Hugo site:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
+</code></pre></div></li>
+</ol>
+<p>Looking in <code>./themes</code> will show that there is now a theme folder called <code>terminal</code>. We can also view the content of <code>.gitmodules</code> to see that the new theme has been added there:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat .gitmodules 
+<span style=color:#f92672>[</span>submodule <span style=color:#e6db74>&#34;themes/terminal&#34;</span><span style=color:#f92672>]</span>
+        path <span style=color:#f92672>=</span> themes/terminal
+        url <span style=color:#f92672>=</span> https://github.com/panr/hugo-theme-terminal.git
+</code></pre></div><p>Updating a submodule is possible with this command so updating the site is as simple as using a clone:</p>
+<pre tabindex=0><code>git submodule update --remote --merge
+</code></pre><p>Submodules have some complexity with how they are managed and also build a little bit of complexity for anybody else working on the site. On first cloning the site the <code>--recursive</code> command should be used to ensure the theme is also downloaded. As with a clone, a submodule also keeps the git history. Removing a submodule is also quite complex. The site needs to be a git repo already before a submodule can be added, this depending on the setup this may not be desirable.</p>
+<h3 id=adding-the-theme-by-creating-a-hugo-module>Adding the theme by creating a Hugo module<a href=#adding-the-theme-by-creating-a-hugo-module class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>This is the most invovled way of adding a theme as there are dependencies to install but once set up the full power of Hugo can be unleashed.</p>
+<ol>
+<li>Install <a href=https://go.dev/>go</a> - this is a one time installation as it&rsquo;s a dependency for hugo modules.</li>
+<li>Initialise the Hugo site as a go module. From the root folder, the command for this site would be:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo mod init andrewfitzy.github.io
+</code></pre></div></li>
+<li>Update the <code>cofig.toml</code> with the theme you&rsquo;d like to add as a module, for instance to add the <a href=https://github.com/chipzoller/hugo-clarity>hugo-clarity</a> theme add this:
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>module</span>]
+  [[<span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>imports</span>]]
+    <span style=color:#a6e22e>path</span> = <span style=color:#e6db74>&#34;github.com/chipzoller/hugo-clarity&#34;</span>
+</code></pre></div></li>
+<li>Now start the hugo server, the theme will be applied.</li>
+</ol>
+<p>As you can see, getting a theme set up as a module is a bit more invovled than any other the other methods but it does have some distinct advantages:</p>
+<ul>
+<li>The theme will be incorporated automatically - no need to add theme files to source control or checkout recursively.</li>
+<li>Getting used to modules will open up further functionality of Hugo</li>
+</ul>
+<h2 id=configuring-a-theme>Configuring a theme<a href=#configuring-a-theme class=hanchor arialabel=Anchor>&#8983;</a> </h2>
+<h3 id=direct-download-git-clone-git-module>Direct download, git clone, git module<a href=#direct-download-git-clone-git-module class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>Unless the theme was added as a Hugo module, Hugo needs to be told the name of the theme to use in in <code>confilg.toml</code>. For example</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>theme</span> = <span style=color:#e6db74>&#34;ananke&#34;</span>
+</code></pre></div><p>or</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>theme</span> = <span style=color:#e6db74>&#34;terminal&#34;</span>
+</code></pre></div><h3 id=hugo-module>Hugo module<a href=#hugo-module class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>If the theme has been added as a Hugo module, it&rsquo;s simple to change between themes, for example:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>module</span>]
+  [[<span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>imports</span>]]
+    <span style=color:#a6e22e>path</span> = <span style=color:#e6db74>&#34;gitlab.com/neoteric-design/products/cosette&#34;</span>
+    <span style=color:#a6e22e>disable</span>=<span style=color:#66d9ef>true</span>
+  [[<span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>imports</span>]]
+    <span style=color:#a6e22e>path</span> = <span style=color:#e6db74>&#34;github.com/chipzoller/hugo-clarity&#34;</span>
+</code></pre></div><p>This means 2 themes are available to the site, using <code>disable=true</code> for either of them will make the other theme be used&mldr; NOTE:- this will evaluate from first to last, so if there is no <code>disable=true</code> the first theme module encountered will be applied, <code>cosette</code> in this case.</p>
+<h3 id=theme-configuration>Theme configuration<a href=#theme-configuration class=hanchor arialabel=Anchor>&#8983;</a> </h3>
+<p>Once the theme is decided and set there may be a need to add parameters to configure the theme, these are generally specific to the theme and in the cases I&rsquo;ve seen, will be detailed on the themes GitHub pages. For the terminal theme the <a href=https://github.com/panr/hugo-theme-terminal#how-to-configure>configurations options</a> are on GitHub.</p>
+<p>Not supplying mandatory settings will lead to execution errors. For example, when I set my site to use <code>terminal</code> I didn&rsquo;t supply the <code>fullWidthTheme</code>, or <code>centerTheme</code> params, when I tried to view the site locally I received a message like:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>hugo server -D
+
+Start building sites … 
+ERROR 2021/11/05 15:01:00 render of <span style=color:#e6db74>&#34;page&#34;</span> failed: <span style=color:#e6db74>&#34;/Users/andrew/site-source/themes/terminal/layouts/_default/baseof.html:10:23&#34;</span>: execute of template failed: template: _default/single.html:10:23: executing <span style=color:#e6db74>&#34;_default/single.html&#34;</span> at &lt;$.Site.Params.FullWidthTheme&gt;: invalid value; expected bool
+ERROR 2021/11/05 15:01:00 render of <span style=color:#e6db74>&#34;page&#34;</span> failed: <span style=color:#e6db74>&#34;/Users/andrew/site-source/themes/terminal/layouts/_default/baseof.html:10:23&#34;</span>: execute of template failed: template: _default/single.html:10:23: executing <span style=color:#e6db74>&#34;_default/single.html&#34;</span> at &lt;$.Site.Params.FullWidthTheme&gt;: invalid value; expected bool
+ERROR 2021/11/05 15:01:00 render of <span style=color:#e6db74>&#34;page&#34;</span> failed: <span style=color:#e6db74>&#34;/Users/andrew/site-source/themes/terminal/layouts/_default/baseof.html:10:23&#34;</span>: execute of template failed: template: _default/single.html:10:23: executing <span style=color:#e6db74>&#34;_default/single.html&#34;</span> at &lt;$.Site.Params.FullWidthTheme&gt;: invalid value; expected bool
+ERROR 2021/11/05 15:01:00 render of <span style=color:#e6db74>&#34;home&#34;</span> failed: <span style=color:#e6db74>&#34;/Users/andrew/site-source/themes/terminal/layouts/_default/baseof.html:10:23&#34;</span>: execute of template failed: template: _default/index.html:10:23: executing <span style=color:#e6db74>&#34;_default/index.html&#34;</span> at &lt;$.Site.Params.FullWidthTheme&gt;: invalid value; expected bool
+Built in <span style=color:#ae81ff>29</span> ms
+Error: Error building site: failed to render pages: render of <span style=color:#e6db74>&#34;page&#34;</span> failed: <span style=color:#e6db74>&#34;/Users/andrew/site-source/themes/terminal/layouts/_default/baseof.html:10:23&#34;</span>: execute of template failed: template: _default/single.html:10:23: executing <span style=color:#e6db74>&#34;_default/single.html&#34;</span> at &lt;$.Site.Params.FullWidthTheme&gt;: invalid value; expected bool
+</code></pre></div><p>To resolve the issue I added this to my <code>config.toml</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>params</span>]
+  <span style=color:#a6e22e>contentTypeName</span> = <span style=color:#e6db74>&#34;posts&#34;</span>
+  <span style=color:#a6e22e>themeColor</span> = <span style=color:#e6db74>&#34;orange&#34;</span>
+  <span style=color:#a6e22e>showMenuItems</span> = <span style=color:#ae81ff>2</span>
+  <span style=color:#a6e22e>showLanguageSelector</span> = <span style=color:#66d9ef>false</span>
+  <span style=color:#a6e22e>fullWidthTheme</span> = <span style=color:#66d9ef>false</span>
+  <span style=color:#a6e22e>centerTheme</span> = <span style=color:#66d9ef>false</span>
+  <span style=color:#a6e22e>autoCover</span> = <span style=color:#66d9ef>true</span>
+  <span style=color:#a6e22e>showLastUpdated</span> = <span style=color:#66d9ef>false</span>
+</code></pre></div><p>I now have a Hugo site with a different theme. This process can be repeated as many times as desired with different themes until the right one has been found.</p>
+<p>I hope this has been helpful and inspires you to play with Hugo themes to find the right one.</p>
+</div></div>
+<div class=pagination>
+<div class=pagination__title>
+<span class=pagination__title-h></span>
+<hr>
+</div>
+<div class=pagination__buttons>
+<span class="button next">
+<a href=https://andrewfitzy.github.io/posts/hugo-customisation/>
+<span class=button__text>Hugo Customisation</span>
+<span class=button__icon>→</span>
+</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+<footer class=footer>
+<div class=footer__inner>
+<div class=copyright>
+<span>© 2022 Powered by <a href=http://gohugo.io>Hugo</a></span>
+<span>:: Theme made by <a href=https://twitter.com/panr>panr</a></span>
+</div>
+</div>
+</footer>
+<script src=https://andrewfitzy.github.io/assets/main.js></script>
+<script src=https://andrewfitzy.github.io/assets/prism.js></script>
+</div>
+</body>
+</html>
