@@ -110,11 +110,11 @@ Error: Error building site: failed to render pages: render of &lt;span style="co
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">baseURL&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;http://example.org/&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a href="https://gohugo.io/getting-started/configuration/#baseurl">baseURL&lt;/a> defines the root from which all links to the Hugo site will be built. By default, a post will include sharing links for 3 popular social media sites, this &lt;code>baseURL&lt;/code> property is used for building those links, for instance&amp;hellip;&lt;/p>
 &lt;p>Facebook link:
-&lt;img src="https://andrewfitzy.github.io/2021-10-19/01_FacebookLink.png" alt="Facebook link">&lt;/p>
+&lt;img src="https://andrewfitzy.github.io/hugo-customisation/01_FacebookLink.png" alt="Facebook link">&lt;/p>
 &lt;p>Twitter link:
-&lt;img src="https://andrewfitzy.github.io/2021-10-19/02_TwitterLink.png" alt="Twitter link">&lt;/p>
+&lt;img src="https://andrewfitzy.github.io/hugo-customisation/02_TwitterLink.png" alt="Twitter link">&lt;/p>
 &lt;p>LinkedIn link:
-&lt;img src="https://andrewfitzy.github.io/2021-10-19/03_LinkedInLink.png" alt="LinkedIn link">&lt;/p>
+&lt;img src="https://andrewfitzy.github.io/hugo-customisation/03_LinkedInLink.png" alt="LinkedIn link">&lt;/p>
 &lt;p>In each case the &lt;code>baseURL&lt;/code> is used to create the link back for the post to the social media platform, and as this is set to &lt;code>http://example.org/&lt;/code> by default it will mean that any sharing of links to content will actually be links to an IANA holding page rather than links to content.&lt;/p>
 &lt;p>This value should be updated with the value of the GitHub pages site, so in my case this property will be changed to:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">baseURL&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;http://andrewfitzy.github.io/&amp;#34;&lt;/span>
@@ -128,7 +128,7 @@ Error: Error building site: failed to render pages: render of &lt;span style="co
 &lt;p>Default value:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">title&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;My New Hugo Site&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>This displays in the header and footer for the site and also on the front page:
-&lt;img src="https://andrewfitzy.github.io/2021-10-19/04_DefaultHugoPage.png" alt="Default Hugo page">&lt;/p>
+&lt;img src="https://andrewfitzy.github.io/hugo-customisation/04_DefaultHugoPage.png" alt="Default Hugo page">&lt;/p>
 &lt;p>My site doesn&amp;rsquo;t really have a name so I&amp;rsquo;ve updated this value to be the GitHub pages url:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#a6e22e">title&lt;/span> = &lt;span style="color:#e6db74">&amp;#34;andrewfitzy.github.io&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="other-configuration">Other configuration&lt;/h2>
@@ -220,7 +220,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 &lt;span style="color:#f92672">publish_branch&lt;/span>: &lt;span style="color:#ae81ff">master&lt;/span> &lt;span style="color:#75715e"># The branch of the external_repository to publish to&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Much of the above configuration is discussed on the &lt;a href="https://github.com/peaceiris/actions-gh-pages">actions-gh-pages&lt;/a> and the &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub&lt;/a> pages of the Hugo site. I found that I had to provide &lt;code>external_repository&lt;/code> and &lt;code>publish_branch&lt;/code> to get my pipeline building and deploying automatically so that pushing an update to my source repo results in a post appearing on &lt;a href="http://andrewfitzy.github.io">http://andrewfitzy.github.io&lt;/a>.&lt;/p>
 &lt;p>Assuming this guide has been followed and all has worked out ok, navigating to your GitHub pages site should result in a site that looks like&amp;hellip;
-&lt;img src="https://andrewfitzy.github.io/2021-10-13/01_DefaultHugoPage.png" alt="Default Hugo page">.&lt;/p>
+&lt;img src="https://andrewfitzy.github.io/hugo-setup/01_DefaultHugoPage.png" alt="Default Hugo page">.&lt;/p>
 &lt;h2 id="create-a-new-post-like-this-one-and-watch-the-magic">Create a new post (like this one) and watch the magic&lt;/h2>
 &lt;p>Now that we have our site set up, each time we want to &lt;a href="https://gohugo.io/getting-started/quick-start/#step-4-add-some-content">add some content&lt;/a> we can use the following command:&lt;/p>
 &lt;pre tabindex="0">&lt;code>hugo new posts/&amp;lt;title-of-post&amp;gt;.md

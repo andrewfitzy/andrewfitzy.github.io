@@ -127,7 +127,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
           <span style=color:#f92672>publish_branch</span>: <span style=color:#ae81ff>master</span> <span style=color:#75715e># The branch of the external_repository to publish to</span>
 </code></pre></div><p>Much of the above configuration is discussed on the <a href=https://github.com/peaceiris/actions-gh-pages>actions-gh-pages</a> and the <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>Host on GitHub</a> pages of the Hugo site. I found that I had to provide <code>external_repository</code> and <code>publish_branch</code> to get my pipeline building and deploying automatically so that pushing an update to my source repo results in a post appearing on <a href=http://andrewfitzy.github.io>http://andrewfitzy.github.io</a>.</p>
 <p>Assuming this guide has been followed and all has worked out ok, navigating to your GitHub pages site should result in a site that looks like&mldr;
-<img src=/2021-10-13/01_DefaultHugoPage.png alt="Default Hugo page">.</p>
+<img src=/hugo-setup/01_DefaultHugoPage.png alt="Default Hugo page">.</p>
 <h2 id=create-a-new-post-like-this-one-and-watch-the-magic>Create a new post (like this one) and watch the magic<a href=#create-a-new-post-like-this-one-and-watch-the-magic class=hanchor arialabel=Anchor>&#8983;</a> </h2>
 <p>Now that we have our site set up, each time we want to <a href=https://gohugo.io/getting-started/quick-start/#step-4-add-some-content>add some content</a> we can use the following command:</p>
 <pre tabindex=0><code>hugo new posts/&lt;title-of-post&gt;.md
