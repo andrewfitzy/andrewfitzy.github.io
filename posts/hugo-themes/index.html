@@ -1,21 +1,21 @@
 <!doctype html><html lang=en>
 <head>
-<title>Theme Update :: andrewfitzy.github.io</title>
+<title>Hugo Themes :: andrewfitzy.github.io</title>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="There are tons of themes available for Hugo, take a look at jamstack and the Hugo&amp;rsquo;s own page and there are plenty to play with. The different themes are sutilable for different sites, for instance geekblog is a good blog site theme, Resume A4 could be a good personal portfolio site and showcase could be good for recipes. I think that choosing a theme is about knowing what your site is going to be used for and also seeing what features a theme has available.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
-<link rel=canonical href=https://andrewfitzy.github.io/posts/theme-update/>
+<link rel=canonical href=https://andrewfitzy.github.io/posts/hugo-themes/>
 <link rel=stylesheet href=https://andrewfitzy.github.io/assets/style.css>
 <link rel=apple-touch-icon href=https://andrewfitzy.github.io/img/apple-touch-icon-192x192.png>
 <link rel="shortcut icon" href=https://andrewfitzy.github.io/img/favicon/orange.png>
 <meta name=twitter:card content="summary">
 <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Theme Update">
+<meta property="og:title" content="Hugo Themes">
 <meta property="og:description" content="There are tons of themes available for Hugo, take a look at jamstack and the Hugo&amp;rsquo;s own page and there are plenty to play with. The different themes are sutilable for different sites, for instance geekblog is a good blog site theme, Resume A4 could be a good personal portfolio site and showcase could be good for recipes. I think that choosing a theme is about knowing what your site is going to be used for and also seeing what features a theme has available.">
-<meta property="og:url" content="https://andrewfitzy.github.io/posts/theme-update/">
+<meta property="og:url" content="https://andrewfitzy.github.io/posts/hugo-themes/">
 <meta property="og:site_name" content="andrewfitzy.github.io">
 <meta property="og:image" content="https://andrewfitzy.github.io/img/favicon/orange.png">
 <meta property="og:image:width" content="2048">
@@ -39,7 +39,7 @@ Terminal
 <div class=content>
 <div class=post>
 <h1 class=post-title>
-<a href=https://andrewfitzy.github.io/posts/theme-update/>Theme Update</a></h1>
+<a href=https://andrewfitzy.github.io/posts/hugo-themes/>Hugo Themes</a></h1>
 <div class=post-meta>
 <span class=post-date>
 2022-02-12
@@ -57,7 +57,7 @@ Terminal
 <ol>
 <li>Find the repo for the theme, for example the <a href=https://github.com/luizdepra/hugo-coder>hugo-coder</a> theme</li>
 <li>Download the source and unzip it in the <code>themes</code> folder.
-<img src=/theme-update/01.png alt="Direct code download"></li>
+<img src=/hugo-themes/01.png alt="Direct code download"></li>
 </ol>
 <p>This is a very simple way to add and test themes and is easy to reverse as reverting is a case of removing the theme folder.</p>
 <p>One downside of this approach if used long term, is that applying any updates for the theme is a manual task, firstly finding the source for the theme then overwriting whatever already exists. Also, the theme files have to be stored in Git else configuration to use the theme will break the site.</p>
@@ -66,7 +66,7 @@ Terminal
 <ol>
 <li>Find the repo for the theme, for example the <a href=https://github.com/Yukuro/hugo-theme-shell.git>hugo-theme-shell</a> theme</li>
 <li>Copy the URL of the repo for cloning
-<img src=/theme-update/02.png alt="Repo url for shell theme"></li>
+<img src=/hugo-themes/02.png alt="Repo url for shell theme"></li>
 <li>Clone the repo in the themes folder of the hugo site:
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone https://github.com/Yukuro/hugo-theme-shell.git
 </code></pre></div></li>
@@ -79,7 +79,7 @@ Terminal
 <ol>
 <li>Find the repo for the theme, for example the <a href=https://github.com/panr/hugo-theme-terminal.git>terminal</a> theme</li>
 <li>Copy the URL of the repo for adding as a submodule
-<img src=/theme-update/03.png alt="Repo url for terminal theme"></li>
+<img src=/hugo-themes/03.png alt="Repo url for terminal theme"></li>
 <li>Add the new theme as a new submodule, use this command from the main directory housing the Hugo site:
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
 </code></pre></div></li>
